@@ -1,24 +1,31 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# テーブル設計
 
-Things you may want to cover:
+## users テーブル
 
-* Ruby version
+| Column             | Type   | Options                  |
+| ------------------ | ------ | -----------------------  |
+| baby_name               | string | null: false              |
+| email              | string | null: false unique: true |
+| encrypted_password | string | null: false              |
+| postal_code        | string | null: false              |
+| gender             | string | null: false              |
 
-* System dependencies
+### Association
 
-* Configuration
+- has_many :garments
 
-* Database creation
 
-* Database initialization
+## garments テーブル
+| Column                       | Type       | Options                       |
+| ---------------------------  | ------     | ----------------------------- |
+| image_name                   | string     | null: false                   |
+| content                      | text       | null: false                   |
+| user                         | references | null: false foreign_key: true |
 
-* How to run the test suite
+- image用テーブルも用意
 
-* Services (job queues, cache servers, search engines, etc.)
+### Association
 
-* Deployment instructions
-
-* ...
+- belongs_to :user
