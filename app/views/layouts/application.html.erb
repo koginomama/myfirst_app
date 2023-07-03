@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyfirstApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" href="style.css">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <header>
+    <div class="header-content">
+      <div class="title">子供向けウェブサイト</div>
+      <div class="login">
+        <a href="#">ログイン</a>
+        <a href="#">新規登録</a>
+      </div>
+    </div>
+  </header>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+/* リセットCSS */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+ul,
+li,
+h1,
+h2,
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
+  color: #3b4043;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  color: #3b4043;
+}
+
+/* ページ全体のスタイル */
+/* styles.css */
+
+/* ページ全体のスタイル */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #F9F9F9;
+
+}
+
+/* ヘッダーのスタイル */
+header {
+  height: 80px;
+  background-color: #FFC0CB;
+  padding: 20px;
+}
+
+/* ヘッダーコンテンツのスタイル */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* タイトルのスタイル */
+.title {
+  font-size: 24px;
+  color: #FFF;
+}
+
+/* ログインリンクのスタイル */
+.login a {
+  color: #FFF;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.post{
+  width: 100vw;
+  height: 100vh;
+}
+
+.tenki-space{
+  height: 300px;
+}
+
+.post-items{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main-post{
+  padding: 100px
+}
+
+.temp-image{
+  width: 33%;
+  height: 33%;
+}
+
+.post-content {
+  color: red;
+}
+
+/* フッターのスタイル */
+footer {
+  height: 80px;
+  background-color: #FFC0CB;
+  padding: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: #FFF;
+}
+
