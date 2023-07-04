@@ -1,45 +1,10 @@
-/* リセットCSS */
-* {
-  box-sizing: border-box;
-}
-
-html,
-body,
-ul,
-li,
-h1,
-h2,
-p,
-div {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
-  color: #3b4043;
-}
-
-li {
-  list-style: none;
-}
-
-img {
-  max-width: 100%;
-  vertical-align: bottom;
-}
-
-a {
-  text-decoration: none;
-  color: #3b4043;
-}
 
 /* ページ全体のスタイル */
 /* styles.css */
 
+
 /* ページ全体のスタイル */
 body {
-  font-family: 'Arial', sans-serif;
   background-color: #F9F9F9;
 
 }
@@ -49,6 +14,7 @@ header {
   height: 80px;
   background-color: #FFC0CB;
   padding: 20px;
+  font-family: 'Cherry Bomb One', cursive;
 }
 
 /* ヘッダーコンテンツのスタイル */
@@ -60,8 +26,9 @@ header {
 
 /* タイトルのスタイル */
 .title {
-  font-size: 24px;
+  font-size: 36px;
   color: #FFF;
+  line-height: 36px;
 }
 
 /* ログインリンクのスタイル */
@@ -69,11 +36,17 @@ header {
   color: #FFF;
   text-decoration: none;
   margin-left: 10px;
+  font-size: 20px;
 }
 
 .post{
   width: 100vw;
-  height: 100vh;
+  height: calc(100% - 200px);
+  background-image: url('back_image2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding: 0 10px;
 }
 
 .tenki-space{
@@ -82,26 +55,28 @@ header {
 
 .post-items{
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: start;
+  
 }
 
 .main-post{
-  padding: 100px
+  width: calc((100% - 50px) / 3);
 }
 
-.temp-image{
-  width: 33%;
-  height: 33%;
+.temp-image {
+  height: 400px;
 }
 
 .post-content {
-  color: red;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-style: normal;
+  color: royalblue;
+  margin: 10px;
 }
 
-/* フッターのスタイル */
 footer {
-  height: 80px;
   background-color: #FFC0CB;
   padding: 20px;
   text-align: center;
@@ -109,3 +84,16 @@ footer {
   color: #FFF;
 }
 
+ /* スマホ表示時 */
+ @media (max-width: 599px) {
+  .main-post {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+  .post-content {
+    font-size: 18px;
+  }
+  .card__summary {
+    font-size: 14px;
+  }
+}
