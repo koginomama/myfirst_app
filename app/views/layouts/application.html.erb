@@ -5,8 +5,8 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="reset.css">
+    <%# <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css"> %>
     <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=M+PLUS+Rounded+1c:wght@500&family=Tsukimi+Rounded&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -15,15 +15,19 @@
 
   <header>
     <div class="header-content">
-      <div class="title">おようふくえらび</div>
-      <div class="login">
-        <a href="#">ログイン</a>
-        <a href="#">しんきとうろく</a>
-      </div>
+      <%= link_to 'おようふくえらび', root_path, class:"title" %>
+      <ul class="login">
+        <li><%= link_to 'ログイン',"#", class: "login-name"  %></li>
+        <li><%= link_to 'しんきとうろく', new_user_registration_path, class: "login-name"  %></li>
+      </ul>
     </div>
   </header>
 
   <body>
     <%= yield %>
   </body>
+
+  <footer>
+     <p class="copyright">Copyright © POIPOI All rights reserved.</p>
+  </footer>
 </html>

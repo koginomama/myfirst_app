@@ -6,11 +6,11 @@
 
 | Column             | Type   | Options                  |
 | ------------------ | ------ | -----------------------  |
-| baby_name               | string | null: false              |
+| baby_name          | string | null: false              |
 | email              | string | null: false unique: true |
 | encrypted_password | string | null: false              |
 | postal_code        | string | null: false              |
-| gender             | string | null: false              |
+| gender             | boolean | null: false              |
 
 ### Association
 

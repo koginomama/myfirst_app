@@ -13,7 +13,7 @@ body {
 header {
   height: 80px;
   background-color: #FFC0CB;
-  padding: 20px;
+  padding: 0 15px;
   font-family: 'Cherry Bomb One', cursive;
 }
 
@@ -28,15 +28,27 @@ header {
 .title {
   font-size: 36px;
   color: #FFF;
-  line-height: 36px;
+  line-height: 80px;
+  text-decoration: none;
 }
 
+
 /* ログインリンクのスタイル */
-.login a {
+.login{
+  display: flex;
+
+}
+
+.login li {
   color: #FFF;
   text-decoration: none;
-  margin-left: 10px;
+  margin-left: 20px;
   font-size: 20px;
+}
+
+.login-name {
+  text-decoration: none;
+  color: #FFF;
 }
 
 .post{
@@ -51,6 +63,14 @@ header {
 
 .tenki-space{
   height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-title{
+  font-size: 50px;
+  font-family: 'Cherry Bomb One', cursive;
 }
 
 .post-items{
@@ -95,5 +115,10 @@ footer {
   }
   .card__summary {
     font-size: 14px;
+  }
+
+  .login {
+    font-size: 10px;
+    display: block;
   }
 }

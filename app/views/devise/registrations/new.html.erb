@@ -1,0 +1,42 @@
+
+
+
+<%= form_with model: @user, url: "#" do |form| %>
+  <div class=form-container>
+  <h1>ゆ〜ざ〜とうろく</h1>
+    <div class="form-group">
+      <%= form.label :おなまえ, class: "form-label" %>
+      <%= form.text_field :baby_name, class: "form-input" %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :めーるあどれす, class: "form-label" %>
+      <%= form.email_field :email, class: "form-input" %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :ぱすわーど, class: "form-label" %>
+      <%= form.password_field :password, class: "form-input" %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :ぱすわーど（かくにんよう）, class: "form-label" %>
+      <%= form.password_field :password_confirmation, class: "form-input" %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :ゆうびんばんごう, class: "form-label" %>
+      <%= form.text_field :postal_code, class: "form-input" %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :せいべつ, class: "form-label" %>
+      <%= form.select :gender, [['おとこのこ', true], ['おんなのこ', false]], {}, class: "form-input" %>
+    </div>
+
+    <div class="form-group">
+      <%= form.submit 'とうろく', class: "form-button" %>
+    </div>
+  </div>
+<% end %>
+
