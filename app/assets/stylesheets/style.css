@@ -61,18 +61,75 @@ header {
   padding: 0 10px;
 }
 
-.tenki-space{
-  height: 300px;
+/* 天気表示部分 */
+
+.weather-space{
+  height: 330px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  font-family: 'Cherry Bomb One', cursive;
+  padding-top: 10px;
+}
+
+.weather-main{
+  color: #FFC0CB;
+}
+
+.weather-today{
+  display: flex;
 }
 
 .weather-title{
-  font-size: 50px;
+  font-size: 60px;
   font-family: 'Cherry Bomb One', cursive;
+  margin-right: 5px;
 }
 
+div.weather-main::after {
+  content: attr(data-text);
+  display: block;
+  width: 100%;
+  height: 1em;
+  font-size: 4em;
+  color: blue;
+  animation: color 3s infinite linear;
+  margin-bottom: 20px;
+}
+
+@keyframes color {
+  0% { color: blue; }
+  10% { color: red; }
+  20% { color: green; }
+  30% { color: yellow; }
+  40% { color: orange; }
+  50% { color: purple; }
+  60% { color: pink; }
+  70% { color: brown; }
+  80% { color: gray; }
+  90% { color: black; }
+  100% { color: blue; }
+}
+
+.weather-temps{
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
+
+.temps{
+  flex-direction: column;
+  font-size: 25px;
+}
+
+.weather-icon{
+  width: 100px;
+  height: 70px;
+}
+
+
+
+/* 投稿画面部分 */
 .post-items{
   display: flex;
   flex-wrap: wrap;
@@ -82,11 +139,20 @@ header {
 }
 
 .main-post{
-  width: calc((100% - 50px) / 3);
+  width: calc((100% - 80px) / 3);
+}
+
+.post-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .temp-image {
   height: 400px;
+  width: 400px;
+  border: 8px solid #FFC0CB;
+  border-radius: 10px;
 }
 
 .post-content {

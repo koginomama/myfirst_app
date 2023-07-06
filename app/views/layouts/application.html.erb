@@ -17,8 +17,13 @@
     <div class="header-content">
       <%= link_to 'おようふくえらび', root_path, class:"title" %>
       <ul class="login">
-        <li><%= link_to 'ログイン',"#", class: "login-name"  %></li>
+      <% if user_signed_in? %>
+        <li><%= link_to "#{current_user.baby_name}さん", "#", class: "login-name"  %></li>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "login-name" %></li>
+      <% else %>
+        <li><%= link_to 'ログイン', user_session_path, class: "login-name"  %></li>
         <li><%= link_to 'しんきとうろく', new_user_registration_path, class: "login-name"  %></li>
+      <% end %>
       </ul>
     </div>
   </header>

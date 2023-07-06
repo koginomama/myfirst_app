@@ -1,27 +1,48 @@
 <body>
-  <nav>
-
-  </nav>
+  <script>
+  // ログイン中のユーザー情報を取得してJavaScript変数に代入する
+  var currentUserPostalCode = '<%= current_user&.postal_code %>';
+</script>
 
   <main>
     <!-- コンテンツの表示 -->
     <div class="post">
-      <div class="tenki-space">
-        <div id="weather-temperature", class="weather-title">おんど</div>
-        <button id="refresh-button">更新する</button>
+      <div class="weather-space">
+        <div class="weather-main" data-text="きょうのてんき"></div>
+        <div class="weather-today">
+          <div id="weather-temperature", class="weather-title">おんど</div>
+          <div id="weather-icon", class="weather-icon">あいこん</div>
+        </div>
+        <div class="weather-temps">
+        <div class="temps">
+          <div class="temp-name">さいこう</div>
+          <div id="temp-max">なんど</div>
+        </div>
+        <div class="temps">
+          <div class="temp-name">さいてい</div>
+          <div id="temp-min">なんど</div>
+        </div>
+        </div>
 
 
+
+
+        <button id="refresh-button", class="button">こうしん</button>
       </div>
       <div class="post-items">
         <div class='main-post'>
-          <%= image_tag "test2.png", class:"temp-image" %>
-          <div class="post-content">
-            <h2>タイトル</h2>
-            <p>また、background-color プロパティに rgba(255, 192, 203, 0.5) を指定しています。ここで、RGBA値の最後の数値は透明度を示しており、0.0から1.0の範囲で指定します。0.0は完全に透明であり、1.0は完全に不透明です。修正後のコードでは、0.5を指定して半透明の背景色を設定しています。RGB値（255, 192, 203）は、透明度の指定に影響しませんが、好みに応じて調整してください。</p>
+          <div class='post-item'>
+            <%= image_tag "1.png", class:"temp-image" %>
           </div>
-        </div>
+          <div class="post-content">
+            <h2>暑い日にぴったり</h2>
+            <p>水色の服は、夏に着るのにぴったりの色です。爽やかで涼しげな印象を与えてくれるので、夏コーデにぜひ取り入れてみてください。</p>
+          </div>
+       </div>
         <div class='main-post'>
-          <%= image_tag "image.png", class:"temp-image" %>
+        <div class='post-item'>
+          <%= image_tag "2.png", class:"temp-image" %>
+          </div>
           <div class="post-content">
             <h2>投稿タイトル</h2>
             <p>これにより、ヘッダーはページの上部に、メインコンテンツは中央に、フッターはページの下部に配置されるはずです。
@@ -29,7 +50,9 @@
           </div>
         </div>
         <div class='main-post'>
-          <%= image_tag "test_image2.png", class:"temp-image" %>
+        <div class='post-item'>
+          <%= image_tag "3.png", class:"temp-image" %>
+          </div>
           <div class="post-content">
             <h2>投稿タイトル</h2>
             <p>コメント内容</p>
