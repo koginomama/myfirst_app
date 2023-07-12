@@ -1,34 +1,117 @@
 <body>
   <script>
   // ログイン中のユーザー情報を取得してJavaScript変数に代入する
-  var currentUserPostalCode = '<%= current_user&.postal_code %>';
-</script>
+  const currentUserPostalCode = '<%= current_user&.postal_code %>';
+  const currentUserGender = '<%= current_user&.gender %>';
+  </script>
 
   <main>
     <!-- コンテンツの表示 -->
     <div class="post">
       <div class="weather-space">
-        <div class="weather-main" data-text="きょうのてんき"></div>
-        <div class="weather-today">
-          <div id="weather-temperature", class="weather-title">おんど</div>
-          <div id="weather-icon", class="weather-icon">あいこん</div>
-        </div>
-        <div class="weather-temps">
-        <div class="temps">
-          <div class="temp-name">さいこう</div>
-          <div id="temp-max">なんど</div>
-        </div>
-        <div class="temps">
-          <div class="temp-name">さいてい</div>
-          <div id="temp-min">なんど</div>
-        </div>
+        <% if user_signed_in? %>
+        <div class="weather-main" data-text="じかんごとのてんき"></div>
+        <button id="refresh-button", class="button">おしてね</button>
+        <% else %>
+        <div class="weather-main" data-text="ろぐいんするとひょうじするよ!"></div>
+        <% end %>
+        <div class="weather-todays">
+          <div class="weather-times">現在の天気
+            <div class="weather-temps">
+              <div class="temps">
+                <div id="temp-max" class="temp-max">?</div><p>℃<p>
+              </div>
+              <div class="temps">
+                <div id="temp-min" class="temp-min">?</div><p>℃<p>
+              </div>
+            </div>
+            <div class="weather-today">
+              <div class="weather-rainy-name">降水確率
+                <div id="weather-temperature", class="weather-title">%</div>
+              </div>
+              <div id="weather-icon", class="weather-icon"></div>
+            </div>
+          </div>
+
+          <div class="weather-times">6時間後
+            <div class="weather-temps">
+              <div class="temps">
+                <div id="temp-max9" class="temp-max">?</div><p>℃<p>
+              </div>
+              <div class="temps">
+                <div id="temp-min9" class="temp-min">?</div><p>℃<p>
+              </div>
+            </div>
+            <div class="weather-today">
+              <div class="weather-rainy-name">降水確率
+                <div id="weather-temperature9", class="weather-title">%</div>
+              </div>
+              <div id="weather-icon9", class="weather-icon"></div>
+            </div>
+          </div>
+
+          <div class="weather-times">12時間後
+            <div class="weather-temps">
+              <div class="temps">
+                <div id="temp-max15" class="temp-max">?</div><p>℃<p>
+              </div>
+              <div class="temps">
+                <div id="temp-min15" class="temp-min">?</div><p>℃<p>
+              </div>
+            </div>
+            <div class="weather-today">
+              <div class="weather-rainy-name">降水確率
+                <div id="weather-temperature15", class="weather-title">%</div>
+              </div>
+              <div id="weather-icon15", class="weather-icon"></div>
+            </div>
+          </div>
+
+          <div class="weather-times">18時間後
+            <div class="weather-temps">
+              <div class="temps">
+                <div id="temp-max21" class="temp-max">?</div><p>℃<p>
+              </div>
+              <div class="temps">
+                <div id="temp-min21" class="temp-min">?</div><p>℃<p>
+              </div>
+            </div>
+            <div class="weather-today">
+              <div class="weather-rainy-name">降水確率
+                <div id="weather-temperature21", class="weather-title">%</div>
+              </div>
+              <div id="weather-icon21", class="weather-icon"></div>
+            </div>
+          </div>
+          
         </div>
 
-
-
-
-        <button id="refresh-button", class="button">こうしん</button>
+        
       </div>
+
+      <% if user_signed_in? %>
+      <div class="select-main">
+        <div class="select-title">
+        <%# <div id="text-container">
+            <span id="moving-text">Hello, World!</span>
+          </div> %>
+        <%="💡きょうの#{current_user.baby_name}ちゃんにおすすめようふく💡" %></div>
+          <div class="select-items">
+            <div class="select-text" id="select-text">おすすめ組み合わせ</div>
+            <div class="select-text-exp" id="select-text-exp"></div>
+          </div>
+        <div class="select-images">イメージがぞう
+          <img src="/assets/1.png" alt="イメージ" class="select-image" id="select-image">
+        </div>
+
+      </div>
+      <% else %>
+      <% end %>
+
+
+
+
+      <div class="post-title-txet">みんなの洋服</div>
       <div class="post-items">
         <div class='main-post'>
           <div class='post-item'>

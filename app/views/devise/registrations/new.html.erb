@@ -2,10 +2,11 @@
 
 
 <%= form_with model: @user, url: user_registration_path, local: true do |form| %>
-<%= render 'layouts/error_messages', model: form.object %>
+
 
   <div class=form-container>
   <h1>ゆ〜ざ〜とうろく</h1>
+  <%= render 'layouts/error_messages', model: form.object, class:"error_messages"%>
     <div class="form-group">
       <%= form.label :おなまえ, class: "form-label" %>
       <%= form.text_field :baby_name, class: "form-input" %>

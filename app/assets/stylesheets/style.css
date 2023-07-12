@@ -22,14 +22,15 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 80px;
 }
 
 /* タイトルのスタイル */
 .title {
   font-size: 36px;
   color: #FFF;
-  line-height: 80px;
   text-decoration: none;
+  line-height: 80px;
 }
 
 
@@ -64,27 +65,19 @@ header {
 /* 天気表示部分 */
 
 .weather-space{
-  height: 330px;
+  height: 25%;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: 'Cherry Bomb One', cursive;
-  padding-top: 10px;
 }
 
 .weather-main{
   color: #FFC0CB;
+  margin-bottom: 40px;
 }
 
-.weather-today{
-  display: flex;
-}
 
-.weather-title{
-  font-size: 60px;
-  font-family: 'Cherry Bomb One', cursive;
-  margin-right: 5px;
-}
 
 div.weather-main::after {
   content: attr(data-text);
@@ -94,7 +87,7 @@ div.weather-main::after {
   font-size: 4em;
   color: blue;
   animation: color 3s infinite linear;
-  margin-bottom: 20px;
+  
 }
 
 @keyframes color {
@@ -107,36 +100,156 @@ div.weather-main::after {
   60% { color: pink; }
   70% { color: brown; }
   80% { color: gray; }
-  90% { color: black; }
+  90% { color: rgb(95, 10, 129); }
   100% { color: blue; }
+}
+
+.button {
+  height: 40px;
+  width: 200px;
+  border-radius: 5px;
+  background-color: aqua;
+  border: 2px solid #FFC0CB;
+  margin-bottom: 20px;
+}
+
+.button:hover{
+  background-color: rgb(99, 151, 241);
+}
+
+.weather-todays{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.weather-times{
+  text-align: center;
+  font-size: 15px;
+  padding: 10px 20px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .weather-temps{
   display: flex;
   justify-content: space-between;
-  width: 200px;
+  width: 150px;
 }
 
 .temps{
-  flex-direction: column;
-  font-size: 25px;
+  display: flex;
+  align-items: end;
+  font-size: 45px;
+  font-family: 'Cherry Bomb One', cursive;
+}
+
+p {
+  font-size: 10px;
+}
+
+.temp-max{
+  color: coral;
+}
+
+.temp-min{
+  color: rgb(0, 51, 255);
+}
+
+.weather-today{
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.weather-rainy-name{
+  font-size: 10px;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.weather-title{
+  font-size: 30px;
+  font-family: 'Cherry Bomb One', cursive;
+  margin-right: 10px;
 }
 
 .weather-icon{
-  width: 100px;
-  height: 70px;
+  width: 80px;
+  height: 60px;
+}
+
+
+
+/* おすすめ洋服表示部分 */
+.select-main{
+  height: 550px;
+
+}
+
+.select-title{
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: gold;
+  font-family: 'Cherry Bomb One', cursive;
+}
+
+.select-items{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 10px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.select-text{
+  width: 300px;
+  padding: 5px;
+  text-align: center;
+}
+
+.select-text-exp{
+  width: 500px;
+}
+
+.select-images{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-family: 'Cherry Bomb One', cursive;
+}
+
+.select-image{
+  display: flex;
+  height: 200px;
+  width: 200px;
+  border: 8px solid #FFC0CB;
+  border-radius: 10px;
+
 }
 
 
 
 /* 投稿画面部分 */
+.post-title-txet{
+  text-align: center;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
 .post-items{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: start;
-  
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+
 }
+
+
 
 .main-post{
   width: calc((100% - 80px) / 3);
@@ -156,7 +269,6 @@ div.weather-main::after {
 }
 
 .post-content {
-  font-family: 'M PLUS Rounded 1c', sans-serif;
   font-style: normal;
   color: royalblue;
   margin: 10px;
@@ -186,5 +298,49 @@ footer {
   .login {
     font-size: 10px;
     display: block;
+  }
+
+  .login li {
+    color: #FFF;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 20px;
+  }
+
+  .select-text-exp{
+    width: 350px;
+  }
+
+  div.weather-main::after {
+    content: attr(data-text);
+    display: block;
+    width: 100%;
+    height: 1em;
+    font-size: 3em;
+    color: blue;
+    animation: color 3s infinite linear;
+    
+  }
+
+
+}
+
+#text-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+#moving-text {
+  display: inline-block;
+  animation: slide-in 5s linear infinite;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
