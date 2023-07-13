@@ -120,65 +120,65 @@ document.getElementById('refresh-button').addEventListener('click', function() {
       textElement.textContent = "肌着2枚＋長袖ウエア" ;
       textExpElement.textContent = "肌寒い日には肌着を1枚プラスして体温調節。冷え込む朝はおくるみを用意しましょう。" ;
       if (currentUserGender == 1) {
-        imageElement.src = '/assets/test0b.jpg';
+        imageElement.src = '/images/test0b.jpg';
       } else {
-        imageElement.src = '/assets/test0g.jpg';
+        imageElement.src = '/images/test0g.jpg';
       }
     } else if (tempAverage >= 0 && tempAverage <= 5) {
       textElement.textContent = "肌着2枚＋長袖ウエア " ;
       textExpElement.textContent = "急に冷え込む肌寒い日には、肌着を2枚重ねて保温し、さらに長袖のウエアを着せましょう。おくるみなどのアイテムをプラスして体温調節も重要です。" ;
       if (currentUserGender == 1) {
-        imageElement.src = '/assets/test5b.jpg';
+        imageElement.src = '/images/test5b.jpg';
       } else {
-        imageElement.src = '/assets/test5g.jpg';
+        imageElement.src = '/images/test5g.jpg';
       };
     } else if (tempAverage >= 6 && tempAverage <= 10) {
       textElement.textContent = "肌着1〜2枚＋長袖ウエア" ;
       textExpElement.textContent = "肌寒い日には肌着を1枚プラスして体温調節。冷え込む朝はおくるみを用意しましょう。" ;
       if (currentUserGender == 1) {
-        imageElement.src = '/assets/test10b.jpg';
+        imageElement.src = '/images/test10b.jpg';
       } else {
-        imageElement.src = '/assets/test10g.jpg';
+        imageElement.src = '/images/test10g.jpg';
       };
     } else if (tempAverage >= 11 && tempAverage <= 15) {
       textElement.textContent = "肌着1〜2枚＋長袖ウエア" ;
       textExpElement.textContent = "比較的冷涼な気温なので、重ね着が必要です。長袖の肌着とロンパースの上にセーターや薄手のジャンパーを重ね、パンツと靴下も合わせましょう。" ;
       if (currentUserGender == 1) {
-        imageElement.src = '/assets/test15b.jpg';
+        imageElement.src = '/images/test15b.jpg';
       } else {
-        imageElement.src = '/assets/test15g.jpg';
+        imageElement.src = '/images/test15g.jpg';
       };
     } else if (tempAverage >= 16 && tempAverage <= 20) {
       textElement.textContent = "肌着1枚＋半袖シャツ1枚" ;
       textExpElement.textContent = "涼しい気温なので、長袖の肌着を追加して保温性を高めます。ロンパースの上に薄手のカーディガンを重ね、薄手のパンツも合わせておくと良いでしょう。" ;
       if (currentUserGender == 1) {
-        imageElement.src = '/assets/test20b.jpg';
+        imageElement.src = '/images/test20b.jpg';
       } else {
-        imageElement.src = '/assets/test20g.jpg';
+        imageElement.src = '/images/test20g.jpg';
       };
     } else if (tempAverage >= 21 && tempAverage <= 25) {
       textElement.textContent = "肌着1枚＋半袖シャツ1枚" ;
       textExpElement.textContent = "暖かい気温ですが、赤ちゃんを直接の日差しから保護するために長袖もおすすめです。軽やかな素材のものを選ぶと良いでしょう。" ;
       if (currentUserGender == 1) {
-        imageElement.src = '/assets/test20b.jpg';
+        imageElement.src = '/images/test20b.jpg';
       } else {
-        imageElement.src = '/assets/test20g.jpg';
+        imageElement.src = '/images/test20g.jpg';
       };
     } else if (tempAverage >= 26 && tempAverage <= 30) {
       textElement.textContent = "肌着1枚＋半袖シャツ1枚" ;
       textExpElement.textContent = "半袖のウエアがおすすめです！室内では肌着のみの着用でも⭕️。適度な通気性と涼しさを確保するために、薄手の素材を選びましょう！" ;
       if (currentUserGender == 1) {
-        imageElement.src = '/assets/test26b.jpg';
+        imageElement.src = '/images/test26b.jpg';
       } else {
-        imageElement.src = '/assets/test26g.jpg';
+        imageElement.src = '/images/test26g.jpg';
       };
     } else {
       textElement.textContent = "肌着1枚or半袖シャツ1枚" ;
       textExpElement.textContent = "室温も高くなる猛暑日は肌着1枚で過ごせます。エアコンの効かせすぎに注意し、冷房対策として薄手の長袖があると安心。汗をたくさんかくようなら、汗取りパットを背中に入れてあせも対策を。" ;
       if (currentUserGender == 1) {
-        imageElement.src = '/assets/test30b.jpg';
+        imageElement.src = '/images/test30b.jpg';
       } else {
-        imageElement.src = '/assets/test30g.jpg';
+        imageElement.src = '/images/test30g.jpg';
       };
     }
   })
