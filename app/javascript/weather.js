@@ -55,37 +55,37 @@ document.getElementById('refresh-button').addEventListener('click', function() {
       switch (iconName) {
         case '01d':
         case '01n':
-          iconSrc = '/assets/hare.png';
+          iconSrc = '/images/hare.png';
           break;
         case '02d':
         case '02n':
-          iconSrc = '/assets/kumori_hare.png';
+          iconSrc = '/images/kumori_hare.png';
           break;
         case '03d':
         case '03n':
         case '04d':
         case '04n':
-          iconSrc = '/assets/kumori.png';
+          iconSrc = '/images/kumori.png';
           break;
         case '09d':
         case '09n':
-          iconSrc = '/assets/niwaka_ame.png';
+          iconSrc = '/images/niwaka_ame.png';
           break;
         case '10d':
         case '10n':
-          iconSrc = '/assets/rainy.png';
+          iconSrc = '/images/rainy.png';
           break;
         case '11d':
         case '11n':
-          iconSrc = '/assets/kaminari.png';
+          iconSrc = '/images/kaminari.png';
           break;
         case '13d':
         case '13n':
-          iconSrc = '/assets/yuki.png';
+          iconSrc = '/images/yuki.png';
           break;
         case '50d':
         case '50n':
-          iconSrc = '/assets/yama_kiri.png';
+          iconSrc = '/images/yama_kiri.png';
           break;
         default:
           iconSrc = '';

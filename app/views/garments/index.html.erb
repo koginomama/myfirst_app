@@ -10,10 +10,10 @@
     <div class="post">
       <div class="weather-space">
         <% if user_signed_in? %>
-        <div class="weather-main" data-text="じかんごとのてんき"></div>
+        <div class="weather-main" data-text="お天気コーデ"></div>
         <button id="refresh-button", class="button">おしてね</button>
         <% else %>
-        <div class="weather-main" data-text="ろぐいんするとひょうじするよ!"></div>
+        <div class="weather-main" data-text="ログインすると表示するよ!"></div>
         <% end %>
         <div class="weather-todays">
           <div class="weather-times">現在の天気
@@ -95,7 +95,7 @@
         <%# <div id="text-container">
             <span id="moving-text">Hello, World!</span>
           </div> %>
-        <%="💡きょうの#{current_user.baby_name}ちゃんにおすすめようふく💡" %></div>
+        <%="💡今日の#{current_user.baby_name}ちゃんにおすすめ洋服💡" %></div>
           <div class="select-items">
             <div class="select-text" id="select-text">おすすめ組み合わせ</div>
             <div class="select-text-exp" id="select-text-exp"></div>
