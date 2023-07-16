@@ -39,7 +39,7 @@ https://first-myapp.onrender.com
 ・ruby on rails  
 ・javascript  
 ・GitHub  
-・Visual Studio Code 
+・Visual Studio Code  
 ・render  
 ・MySQL  
 ・PostgreSQL  
