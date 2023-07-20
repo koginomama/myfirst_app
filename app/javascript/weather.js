@@ -1,7 +1,41 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+  //6時間ごとの時刻の表示機能
+  function updateTime() {
+    const currentTime = new Date();
+    const day = currentTime.getDate();
+    const currentHour = currentTime.getHours();
+    const currentMinute = currentTime.getMinutes();
+    const sixHoursLater = new Date(currentTime.getTime() + 6 * 60 * 60 * 1000);
+    const sixHoursLaterHour = sixHoursLater.getHours();
+    const sixDay = sixHoursLater.getDate();
+    const twelveHoursLater = new Date(currentTime.getTime() + 12 * 60 * 60 * 1000);
+    const twelveHoursLaterHour = twelveHoursLater.getHours();
+    const twelveDay = sixHoursLater.getDate();
+    const eighteenHoursLater = new Date(currentTime.getTime() + 18 * 60 * 60 * 1000);
+    const eighteenHoursLaterHour = eighteenHoursLater.getHours();
+    const eighteenDay = sixHoursLater.getDate();
+
+    const currentTimeString = `${day}日　${currentHour.toString().padStart(2, '0')}時${currentMinute.toString().padStart(2, '0')}分`;
+    document.getElementById('current-time-later').textContent = currentTimeString;
+
+    const sixHoursLaterString = `${sixDay}日　${sixHoursLaterHour.toString().padStart(2, '0')}時頃`;
+    document.getElementById('six-hours-later').textContent = sixHoursLaterString;
+
+    const twelveHoursLaterString = `${twelveDay}日　${twelveHoursLaterHour.toString().padStart(2, '0')}時頃`;
+    document.getElementById('twelve-hours-later').textContent = twelveHoursLaterString;
+
+    const eighteenHoursLaterString = `${eighteenDay}日　${eighteenHoursLaterHour.toString().padStart(2, '0')}時頃`;
+    document.getElementById('eighteen-hours-later').textContent = eighteenHoursLaterString;
+  }
+
+  updateTime();
+  setInterval(updateTime, 1000);
+
+  //ボタンクリック後の処理
 document.getElementById('refresh-button').addEventListener('click', function() {
 
+  //APIの呼び出しとデータの抽出
   const apikey =  process.env.WEATHER_API_KEY;
   const geoapi = `https://api.openweathermap.org/geo/1.0/zip?zip=${currentUserPostalCode},jp&appid=${apikey}`
   fetch(geoapi)
@@ -49,7 +83,7 @@ document.getElementById('refresh-button').addEventListener('click', function() {
     const weatherIconElement21 = document.getElementById('weather-icon21');
     
 
-
+    //気候の条件分岐
     function setWeatherIcon(iconName, element) {
       let iconSrc = '';
       switch (iconName) {
@@ -93,6 +127,7 @@ document.getElementById('refresh-button').addEventListener('click', function() {
       element.innerHTML = `<img src="${iconSrc}" alt="${iconName}">`;
     }
 
+    //HTML側への受け渡し
     temperatureElement3.textContent = Math.round(temppop3 * 100) + "%"; // 温度を要素に表示
     temperatureElement9.textContent = Math.round(temppop9 * 100) + "%";
     temperatureElement15.textContent = Math.round(temppop15 * 100) + "%";
