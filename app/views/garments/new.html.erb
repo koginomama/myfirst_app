@@ -1,0 +1,19 @@
+<div class=form-container-sessions>
+  <h2>ろぐいん</h2>
+
+  <%= form_with(model: @garments, local: true) do |f| %>
+    <div class="field">
+      <%= f.label :めーるあどれす %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :ぱすわーど %><br />
+      <%= f.password_field :password, autocomplete: "current-password" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "ろぐいん" %>
+    </div>
+  <% end %>
+</div>
